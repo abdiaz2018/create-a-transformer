@@ -17,4 +17,8 @@ class TransformerController < ApplicationController
         erb :"/transformers/show"
     end
 
+    get "/transformers/:id/edit" do 
+        @transformer = Transformer.find(params[:id])
+        erb :"/transformers/edit"
+
 end
