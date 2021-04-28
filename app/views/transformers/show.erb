@@ -3,3 +3,10 @@
 Alternate Form: <%= @transformer.alternate_form %>
 <br>
 Team: <%= @transformer.team %>
+<br>
+<button><a href="/transformers/<%= @transformer.id%>/edit">Edit</a></button>
+
+<form method="POST" action="/transformers/<%= @transformer.id%> ">
+    <input type="hidden" name="_method" value="DELETE" >
+    <input type="submit" value="Delete" >
+</form>

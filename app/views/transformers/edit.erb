@@ -1,0 +1,12 @@
+<h3>Edit Transformer Below</h3>
+<form action="/transformers/<%= @transformer.id %>" method="POST">
+    <input type="hidden" name="_method" value="patch">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= @transformer.name %>"><br>
+    <label>Alternate Form</label>
+    <input type="text" name="alternate_form" value="<%= @transformer.alternate_form%>"><br>
+    <label>Team</label>
+    <input type="text" name="team" value="<%= @transformer.team%>"><br>
+
+    <input type="submit" value="Edit Transformer" >
+</form>
