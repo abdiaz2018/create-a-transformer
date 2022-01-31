@@ -4,4 +4,10 @@
     Alternate Form: <%= transformer.alternate_form %> 
     <br>
     Team: <%= transformer.team %> 
+    <% if transformer.user == current_user %>
+        <form method="POST" action="/transformers/<%= transformer.id%> ">
+            <input type="hidden" name="_method" value="DELETE" >
+            <input type="submit" value="Delete" >
+        </form>
+    <% end %>
 <% end %> 

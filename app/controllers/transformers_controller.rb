@@ -22,7 +22,7 @@ class TransformerController < ApplicationController
         if @transformer.user_id == current_user.id 
             erb :"/transformers/edit"
         else
-            erb :"/transformers/denied"
+            erb :"/transformers/denied" #redirect 
         end
     end
 
@@ -32,7 +32,7 @@ class TransformerController < ApplicationController
         @transformer.alternate_form = params[:alternate_form]
         @transformer.team = params[:team]
         @transformer.save 
-        redirect "/transformers/#{@transformer.id}"
+        redirect "/transformers/#{@transformer.id}" #erb
     end
 
     delete "/transformers/:id" do 
